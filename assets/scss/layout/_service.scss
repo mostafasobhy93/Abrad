@@ -1,0 +1,234 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Service CSS
+----------------------------------------*/
+.service-item{
+    .service-content{
+        text-align: center;
+        padding: 50px 40px;
+        border: 1px solid var(--rr-color-border-1);
+        .service-icon{
+            height: 65px;
+            width: 65px;
+            margin: 0 auto;
+            margin-bottom: 15px;
+            svg{
+                color: var(--rr-color-heading-primary);
+                @include transition(all 0.3s ease-in-out);
+            }
+        }
+        .title{
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        p{
+            margin-bottom: 25px;
+            @include breakpoint(lg){
+                br{
+                    display: none;
+                }
+            }
+        }
+        .read-more{
+            font-family: var(--rr-ff-heading);
+            color: var(--rr-color-heading-primary);
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            column-gap: 10px;
+            line-height: 1;
+            &:hover{
+                color: var(--rr-color--primary);
+            }
+        }
+    }
+    .service-thumb{
+        height: 250px;
+        overflow: hidden;
+        img{
+            object-fit: cover;
+            object-position: center;
+            width: 100%;
+            height: 100%;
+            @include transform(scale(1));
+            @include transition(all 0.3s ease-in-out);
+        }
+    }
+    &:hover{
+        .service-icon{
+            svg{
+                color: var(--rr-color--primary);
+            }
+        }
+        .service-thumb{
+            img{
+                @include transform(scale(1.02));
+            }
+        }
+    }
+}
+
+// Service 2
+
+.service-2{
+    margin-bottom: -150px;
+    position: relative;
+    z-index: 2;
+}
+
+.service-box{
+    .service-img-wrap{
+        position: relative;
+        .service-img{
+            height: 270px;
+            overflow: hidden;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: 0.3s ease-in-out;
+            }
+        }
+        .service-icon{
+            background-color: var(--rr-color--primary);
+            height: 80px;
+            width: 80px;
+            @include flex-center;
+            position: absolute;
+            bottom: -40px;
+            left: 40px;
+            @include breakpoint(sm){
+                left: 20px;
+            }
+        }
+    }
+    .service-content{
+        background-color: var(--rr-color-common-white);
+        padding: 70px 40px 40px 40px;
+        box-shadow: 0px 0px 20px 0px rgba(19, 16, 34, 0.1);
+        @include breakpoint(sm){
+            padding: 70px 20px 40px 20px;
+        }
+        .title{
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        p{
+            margin-bottom: 20px;
+        }
+        .read-more{
+            font-family: var(--rr-ff-heading);
+            color: var(--rr-color-heading-primary);
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            column-gap: 10px;
+            line-height: 1;
+            &:hover{
+                color: var(--rr-color--primary);
+            }
+        }
+    }
+    &:hover{
+        .service-img{
+            img{
+                transform: scale(1.03);
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+// Service 3
+
+.service-3{
+    .service-item{
+        text-align: left;
+        position: relative;
+        @include transition(all 0.3s ease-in-out);
+        &:before{
+            background-color: var(--rr-color--primary);
+            content: "";
+            width: 0%;
+            height: 5px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            @include transition(all 0.5s ease-in-out);
+        }
+        &:hover{
+            &:before{
+                width: 100%;
+            }
+        }
+        .service-content{
+            text-align: left;
+            border: 2px solid rgba(221, 221, 221, 0.3);
+            @include transition(all 0.3s ease-in-out);
+            @include breakpoint(sm){
+                padding: 40px 20px;
+            }
+            .service-icon{
+                background-color: rgba(255, 102, 0, 0.1);
+                height: 80px;
+                width: 80px;
+                border-radius: 50%;
+                @include flex-center;
+                margin: 0;
+                margin-bottom: 25px;
+                img{
+                    opacity: 0.65;
+                    @include transition(all 0.3s ease-in-out);
+                }
+            }
+            .read-more{
+                i{
+                    color: var(--rr-color--primary);
+                }
+            }
+        }
+        &.heading{
+            &:before{
+                display: none;
+            }
+            .service-content{
+                text-align: left;
+                padding: 0;
+                border: none;
+            }
+        }
+        &:hover{
+            box-shadow: 0px 0px 20px 0px rgba(19, 16, 34, 0.1);
+            border: none;
+            .service-content{
+                border: 2px solid transparent;
+                .service-icon{
+                    img{
+                        opacity: 1;
+                    }
+                }
+            }
+            &.heading{
+                box-shadow: none;
+                .service-content{
+                    border: none;
+                }
+            }
+        }
+    }
+}
+
+
+/* !END:  Service CSS */

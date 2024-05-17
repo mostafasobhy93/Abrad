@@ -1,0 +1,36 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Pricing CSS
+----------------------------------------*/
+.error-form{
+    max-width: 520px;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+    .form-control{
+        padding: 27px 0;
+        border: 1px solid var(--rr-color-border-1);
+        border-radius: 0;
+        padding-left: 20px;
+        padding-right: 100px;
+        box-shadow: none;
+        margin: 50px 0;
+    }
+    button{
+        background-color: var(--rr-color-heading-primary);
+        height: 50px;
+        width: 50px;
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        transform: translateY(-50%);
+        color: var(--rr-color-common-white);
+        @include transition(all 0.3s ease-in-out);
+        &:hover{
+            background-color: var(--rr-color--primary);
+        }
+    }
+}
+
+/* !END:  Pricing CSS */

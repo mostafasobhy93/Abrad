@@ -1,0 +1,61 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Booking CSS
+----------------------------------------*/
+
+.booking-section{
+    position: relative;
+    z-index: 1;
+    .bg-color{
+        background-color: var(--rr-color-heading-primary);
+        width: 100%;
+        height: 60%;
+        position: absolute; 
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+}
+
+.booking-wrap{
+    position: relative;
+}
+
+.booking-form{
+    background-color: var(--rr-color-common-white);
+    max-width: 630px;
+    width: 100%;
+    padding: 60px;
+    box-shadow: 0px 0px 20px 0px rgba(19, 16, 34, 0.1);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    @include breakpoint(sm){
+        padding: 30px 25px;
+        position: inherit;
+        transform: translate(0);
+    }
+    .form-group{
+        .form-control{
+            padding: 17px 15px;
+            margin-bottom: 20px;
+            box-shadow: none;
+            border: 1px solid var(--rr-color-border-1);
+            border-radius: 0;
+        }
+        .submit-btn{
+            .rr-primary-btn{
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+.booking-img{
+    text-align: right;
+}
+
+/* !END:  Booking CSS */

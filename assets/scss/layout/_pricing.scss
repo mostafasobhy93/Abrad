@@ -1,0 +1,83 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Pricing CSS
+----------------------------------------*/
+.pricing-item{
+    box-shadow: 0px 0px 20px 0px rgba(19, 16, 34, 0.1);
+    .pricing-category{
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 1;
+        padding: 40px;
+        margin-bottom: 0;
+    }
+    .pricing{
+        background-color: var(--rr-color-heading-primary);
+        @include flex-vertical-center;
+        justify-content: space-between;
+        padding: 15px 40px;
+        .title{
+            font-size: 48px;
+            font-weight: 600;
+            margin-bottom: 0;
+            span{
+                font-size: 24px;
+                font-weight: 700;
+            }
+        }
+    }
+    .pricing-content{
+        padding: 40px;
+        p{
+            margin-bottom: 30px;
+            @include breakpoint(lg){
+                br{
+                    display: none;
+                }
+            }
+        }
+        .pricing-list{
+            li{
+                font-size: 16px;
+                @include flex-vertical-center;
+                &:not(:last-of-type){
+                    margin-bottom: 10px;
+                }
+                i{
+                    color: var(--rr-color-heading-primary);
+                    margin-right: 10px;
+                }
+            }
+        }
+        .pricing-btn{
+            margin-top: 40px;
+            width: 100%;
+            justify-content: center;
+            border: 1px solid var(--rr-color-border-1);
+            &:hover{
+                border: 1px solid var(--rr-color--primary);
+            }
+        }
+    }
+    &.active{
+        .pricing{
+            background-color: var(--rr-color--primary);
+        }
+        .pricing-content{
+            .pricing-list{
+                li{
+                    i{
+                        color: var(--rr-color--primary);
+                    }
+                }
+            }
+            .pricing-btn{
+                border: 1px solid var(--rr-color--primary);
+            }
+        }
+    }
+}
+
+
+/* !END:  Pricing CSS */

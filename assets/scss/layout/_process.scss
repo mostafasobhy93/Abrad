@@ -1,0 +1,52 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Process CSS
+----------------------------------------*/
+.process-item{
+    position: relative;
+    .shape{
+        position: absolute;
+        top: 20%;
+        right: -45px;
+        @include breakpoint(md){
+            display: none;
+        }
+    }
+    .process-icon{
+        height: 125px;
+        width: 125px;
+        @include flex-center;
+        border: 1px solid var(--rr-color-border-1);
+        border-radius: 50%;
+        margin: 0 auto;
+        margin-bottom: 30px;
+        @include breakpoint(md){
+            margin-bottom: 20px;
+        }
+    }
+    .title{
+        font-weight: 700;
+        margin-bottom: 25px;
+        @include breakpoint(md){
+            margin-bottom: 15px;
+        }
+    }
+    p{
+        @include breakpoint(lg){
+            br{
+                display: none;
+            }
+        }
+        @include breakpoint(md){
+            br{
+                display: block;
+            }
+        }
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+}
+
+/* !END:  Process CSS */

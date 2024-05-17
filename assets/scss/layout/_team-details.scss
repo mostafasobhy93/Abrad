@@ -1,0 +1,96 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Team Details CSS
+----------------------------------------*/
+.team-details{
+    .team-details-info{
+        padding-left: 50px;
+        @include breakpoint(md){
+            padding-left: 0;
+            margin-top: 40px;
+        }
+        .name{
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            span{
+                color: var(--rr-color--primary);
+                font-size: 15px;
+                text-transform: uppercase;
+                display: block;
+                margin-top: 10px;
+            }
+        }
+        .info-list{
+            list-style: none;
+            margin: 30px 0 50px 0;
+            li{
+                @include flex-vertical-center;
+                &:not(:last-of-type){
+                    margin-bottom: 15px;
+                }
+                .list-left{
+                    font-family: var(--rr-ff-heading);
+                    color: var(--rr-color-heading-primary);
+                    font-size: 15px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    width: 115px;
+                    display: block;
+                }
+            }
+        }
+        .social-list{
+            li{
+                display: inline-flex;
+                &:not(:last-of-type){
+                    margin-right: 10px;
+                }
+                a{
+                    background-color: #F3F6FF;
+                    height: 40px;
+                    width: 40px;
+                    @include flex-center;
+                    color: var(--rr-color-heading-primary);
+                    border-radius: 50%;
+                    &:hover{
+                        background-color: var(--rr-color--primary);
+                        color: var(--rr-color-common-white);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.team-details-content{
+    .details-header{
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+}
+
+.team-skill{
+    .skills-items{
+        .skills-item{
+            text-transform: uppercase;
+            .title{
+                font-size: 15px;
+            }
+            .progress{
+                background-color: rgba(255, 102, 0, .2);
+                height: 8px;
+                .progress-bar{
+                    span{
+                        font-size: 15px;
+                        top: -45px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* !END:  Pricing CSS */

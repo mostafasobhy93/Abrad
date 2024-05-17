@@ -1,0 +1,41 @@
+// Font URL
+$font-url: "https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap";
+
+//Font Family
+$font-family: (
+    "ff": (
+        "body": "'Archivo', sans-serif",
+        "heading": "'Titillium Web', serif",
+        "p": "'Archivo', sans-serif",
+    ),
+);
+
+// Font Weight
+$font-scale: (
+    "fw": (
+        "normal": normal,
+        "thin": 100,
+        "elight": 200,
+        "light": 300,
+        "regular": 400,
+        "medium": 500,
+        "sbold": 600,
+        "bold": 700,
+        "ebold": 800,
+        "black": 900,
+    ),
+);
+
+// Font Size
+$font-size: (
+    "fs": (
+        "body": 16,
+        "p": 16,
+        "h1": 82,
+        "h2": 48,
+        "h3": 24,
+        "h4": 20,
+        "h5": 16,
+        "h6": 14,
+    ),
+);

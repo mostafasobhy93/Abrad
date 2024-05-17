@@ -1,0 +1,73 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Project CSS
+----------------------------------------*/
+.project-section{
+    overflow: hidden;
+}
+
+.project-item{
+    position: relative;
+    overflow: hidden;
+    .project-thumb{
+        height: 490px;
+        overflow: hidden;
+        img{
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+    }
+    .project-content{
+        position: absolute;
+        bottom: 30px;
+        left: -40px;
+        border-right: 5px solid var(--rr-color--primary);
+        visibility: hidden;
+        opacity: 0;
+        @include transition(all 0.4s ease-in-out);
+        @include breakpoint(md){
+            left: 0;
+            visibility: visible;
+            opacity: 1;
+        }
+        .title{
+            background-color: var(--rr-color-heading-primary);
+            padding: 20px 30px;
+            margin-bottom: 0;
+            a{
+                color: var(--rr-color-common-white);
+                &:hover{
+                    color: var(--rr-color--primary);
+                }
+            }
+        }
+    }
+    
+    &:hover{
+        .project-content{
+            visibility: visible;
+            opacity: 1;
+            left: -1px;
+        }
+    }
+}
+
+.project-carousel{
+    overflow: visible;
+    padding-bottom: 100px;
+    .swiper-scrollbar{
+        background-color: #232323;
+        width: 300px;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 10px;
+        .swiper-scrollbar-drag{
+            background-color: var(--rr-color--primary);
+            width: 100px!important;
+        }
+    }
+}
+
+/* !END:  Project CSS */

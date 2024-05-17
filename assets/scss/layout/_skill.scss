@@ -1,0 +1,129 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Service CSS
+----------------------------------------*/
+
+.skill-section{
+    position: relative;
+    z-index: 1;
+    .bg-color{
+        background-color: var(--rr-color-heading-primary);
+        height: 35%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+    &.about-page{
+        .skill-wrap{
+            box-shadow: none;
+            padding: 0;
+            .skill-content{
+                padding-right: 40px;
+                @include breakpoint(md){
+                    padding-right: 0;
+                }
+            }
+            .skill-img{
+                padding-left: 40px;
+                @include breakpoint(md){
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+}
+
+
+.skill-wrap{
+    background-color: var(--rr-color-common-white);
+    padding: 120px 80px;
+    justify-content: space-between;
+    box-shadow: 0px 0px 20px 0px rgba(19, 16, 34, 0.1);
+    @include breakpoint(md){
+        padding: 70px 50px;
+    }
+    @include breakpoint(sm){
+        padding: 50px 20px;
+    }
+    .skill-img{
+        text-align: right;
+        @include breakpoint(md){
+            margin-top: 40px;
+            text-align: center;
+        }
+    }
+}
+
+.skills-item{
+    overflow: hidden;
+    &:not(:last-of-type){
+        margin-bottom: 40px;
+    }
+    .title{
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 15px;
+        @include breakpoint(sm){
+            font-size: 18px;
+        }
+    }
+    .progress{
+        height: 12px;
+        overflow: visible;
+        border-radius: 0;
+        .progress-bar{
+            position: relative;
+            background-color: var(--rr-color--primary);
+            overflow: visible;
+            span{
+                font-size: 24px;
+                font-weight: 700;
+                background-repeat: no-repeat;
+                color: var(--rr-color-heading-primary);
+                padding: 10px 10px 20px 10px;
+                position: absolute;
+                top: -55px;
+                right: -11px;
+                @include breakpoint(sm){
+                    font-size: 18px;
+                    padding-top: 20px;
+                    top: -60px;
+                }
+            }
+        }
+    }
+}
+
+
+// Skill 2
+
+.skill-2{
+    .skills-items{
+        padding-right: 30px;
+        @include breakpoint(md){
+            padding: 0;
+        }
+        &.item-2{
+            padding-right: 0;
+            padding-left: 30px;
+            @include breakpoint(md){
+                padding: 0;
+                padding-top: 16px;
+            }
+        }
+    }
+}
+
+.skill-top{
+    align-items: end;
+    p{
+        max-width: 600px;
+        width: 100%;
+    }
+}
+
+
+/* !END:  Service CSS */

@@ -1,0 +1,102 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Contact CSS
+----------------------------------------*/
+
+.contact-wrap{
+    background-color: var(--rr-color-grey-1);
+    padding: 60px;
+    align-items: end;
+    @include breakpoint(sm){
+        padding: 40px 20px;
+    }
+    .section-heading{
+        .section-title{
+            margin: 0;
+        }
+    }
+}
+
+.contact-form{
+    @include breakpoint(md){
+        margin-bottom: 60px;
+    }
+    .form-item-wrap{
+        margin-bottom: 23px;
+        .form-item{
+            position: relative;
+            .form-control{
+                background-color: var(--rr-color-common-white);
+                border: none;
+                box-shadow: none;
+                border-radius: 0;
+                padding: 18px 20px;
+                font-size: 14px;
+                @include tp-placeholder{
+                    font-size: 14px;
+                }
+            }
+            .icon{
+                position: absolute;
+                top: 50%;
+                right: 20px;
+                transform: translateY(-50%);
+                color: var(--rr-color-heading-primary);
+            }
+            &.address{
+                .icon{
+                    top: 25px;
+                }
+            }
+        }
+    }
+    .submit-btn{
+        .rr-primary-btn{
+            width: 100%;
+            justify-content: center;
+        }
+    }
+}
+
+.contact-box{
+    background-color: var(--rr-color-common-white);
+    padding: 30px 25px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 60px 1fr;
+    grid-gap: 20px;
+    box-shadow: 0px 0px 20px 0px rgba(19, 16, 34, 0.1);
+    &:not(:last-of-type){
+        margin-bottom: 45px;
+    }
+    .icon{
+        background-color: rgba(255, 102, 0, 0.1);
+        color: var(--rr-color--primary);
+        width: 60px;
+        height: 60px;
+        @include flex-center;
+        border-radius: 50%;
+    }
+    .content{
+        .title{
+            font-weight: 700;
+        }
+        .contact-info{
+            @include flex-vertical-center;
+            column-gap: 10px;
+            flex-wrap: wrap;
+            row-gap: 5px;
+            span{
+                font-size: 16px;
+                color: var(--rr-color-heading-primary);
+            }
+        }
+    }
+}
+
+.map-wrapper{
+    margin-bottom: -10px;
+}
+
+/* !END:  Contact CSS */

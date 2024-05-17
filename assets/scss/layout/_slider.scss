@@ -1,0 +1,1023 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Slider CSS
+----------------------------------------*/
+.slider-section {
+    overflow: hidden;
+}
+
+.pixfix-slider {
+    background-color: var(--rr-color-heading-primary);
+    position: relative;
+    z-index: 2;
+}
+
+.slider-item {
+    min-height: 800px;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    @include breakpoint(lg){
+        height: auto;
+    }
+    @include breakpoint(sm){
+        height: 1100px;
+    }
+    .slider-content-wrap {
+        margin-top: 150px;
+        @include breakpoint(md){
+            margin-top: 80px;
+            margin-bottom: 50px;
+        }
+        @include breakpoint(sm){
+            margin-bottom: 90px;
+        }
+        .slider-content{
+            position: relative;
+            .shapes{
+                @include breakpoint(sm){
+                    display: none;
+                }
+                .shape{
+                    position: absolute;
+                    &.shape-1{
+                        top: 0;
+                        right: -40px;
+                        @include breakpoint(lg){
+                            right: 60px;
+                        }
+                    }
+                    &.shape-2{
+                        top: 30%;
+                        left: -40px;
+                    }
+                    &.shape-3{
+                        top: 36%;
+                        right: 20%;
+                    }
+                }
+            }
+        }
+        .slider-content-inner{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            row-gap: 30px;
+            @include breakpoint(md){
+                padding-right: 50px;
+            }
+            @include breakpoint(sm){
+                flex-direction: column;
+                align-items: baseline;
+                row-gap: 50px;
+            }
+        }
+        .pixfix-caption {
+            margin-bottom: 42px;
+            position: relative;
+            z-index: 2;
+            @include breakpoint(md) {
+                margin-bottom: 30px;
+            }
+            &.sub-heading{
+                margin-bottom: 0;
+            }
+        }
+        .pixfix-small-cap{
+            font-family: var(--rr-ff-heading);
+            color: var(--rr-color-common-white);
+            font-size: 16px;
+            display: inline-block;
+            position: relative;
+            text-transform: capitalize;
+            margin-bottom: 20px;
+            z-index: 1;
+            &:before{
+                background-image: url(../img/shapes/hero-text-shape.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: bottom center;
+                content: "";
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                bottom: -7px;
+                left: 0;
+                z-index: -1;
+                animation: section-animation-2 3s infinite;
+            }
+        }
+        .pixfix-cap {
+            color: var(--rr-color-common-white);
+            font-size: 75px;
+            font-weight: 700;
+            line-height: 1;
+            letter-spacing: -2.47px;
+            @include breakpoint(lg){
+                max-width: 600px;
+                width: 100%;
+            }
+            @include breakpoint(sm){
+                font-size: 42px;
+            }
+            span{
+                -webkit-text-fill-color: transparent;
+                -webkit-text-stroke-width: 1px;
+                -webkit-text-stroke-color: var(--rr-color-common-white);
+            }
+        }
+        .slider-list{
+            margin-bottom: 50px;
+            list-style: none;
+            li{
+                color: var(--rr-color-common-white);
+                font-size: 16px;
+                font-weight: 400;
+                @include flex-vertical-center;
+                &:not(:last-of-type){
+                    margin-bottom: 15px;
+                }
+                i{
+                    color: var(--rr-color--primary);
+                    margin-right: 15px;
+                    font-size: 18px;
+                }
+            }
+        }
+        .slider-btn-wrap{
+            @include flex-vertical-center;
+            column-gap: 35px;
+            flex-wrap: wrap;
+            row-gap: 40px;
+            .video-btn{
+                a{
+                @include flex-vertical-center;
+                column-gap: 25px;
+                .play-btn{
+                    background-color: var(--rr-color-common-white);
+                    color: var(--rr-color--primary);
+                    font-size: 20px;
+                    height: 50px;
+                    width: 50px;
+                    border-radius: 50%;
+                    @include flex-center;
+                    position: relative;
+                    z-index: 1;
+                    @include transition(all 0.3s ease-in-out);
+                    &:hover{
+                        color: var(--rr-color-common-white);
+                        background-color: var(--rr-color--primary);
+                    }
+                    i{
+                        margin-left: 2px;
+                    }
+                }
+                }
+                span{
+                    color: var(--rr-color-common-white);
+                    display: block;
+                    font-size: 16px;
+                    @include transition(all 0.3s ease-in-out);
+                    &:hover{
+                        color: var(--rr-color--primary);
+                    }
+                }
+            }
+        }
+    }
+    .slider-img{
+        position: relative;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        @include breakpoint(lg){
+            position: inherit;
+            @include flex-center;
+        }
+        .bg-img{
+            position: absolute;
+            bottom: 20px;
+            left: 85px;
+            @include breakpoint(xl){
+                left: 0;
+            }
+            @include breakpoint(lg){
+                position: inherit;
+            }
+        }
+        .slider-men{
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            right: 24%;
+            text-align: center;
+            @include breakpoint(xl){
+                right: 22%;
+            }
+            @include breakpoint(lg){
+                right: inherit;
+            }
+        }
+    }
+    &.item-2{
+        @include breakpoint(md){
+            height: auto;
+            min-height: auto;
+        }
+        .slider-content-wrap{
+            @include breakpoint(md){
+                margin: 80px 0;
+            }
+            .slider-content{
+                .pixfix-cap{
+                    margin-bottom: 10px;
+                    @include breakpoint(lg){
+                        font-size: 60px;
+                    }
+                    @include breakpoint(sm){
+                        font-size: 38px;
+                    }
+                }
+                .slider-desc{
+                    color: var(--rr-color-common-white);
+                    margin-bottom: 50px;
+                    @include breakpoint(lg){
+                        max-width: 500px;
+                        br{
+                            display: none;
+                        }
+                    }
+                }
+                .slider-btn-wrap{
+                    column-gap: 50px;
+                    .header-contact{
+                        @include flex-vertical-center;
+                        column-gap: 15px;
+                        @include breakpoint(md){
+                            margin-right: 40px;
+                        }
+                        @include breakpoint(sm){
+                            display: none;
+                        }
+                        .contact{
+                            margin-bottom: 0;
+                            span{
+                                display: block;
+                                font-family: var(--rr-ff-body);
+                                color: var(--rr-color-common-white);
+                                font-size: 16px;
+                                font-weight: 400;
+                                margin-bottom: 5px;
+                            }
+                            a{
+                                color: var(--rr-color-common-white);
+                                font-size: 21px;
+                                font-weight: 700;
+                                &:hover{
+                                    color: var(--rr-color--primary);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .slider-img-box{
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        z-index: 1;
+        @include breakpoint(xxxl){
+            right: -13%;
+        }
+        @include breakpoint(xxl){
+            right: -20%;
+        }
+        @include breakpoint(xl){
+            right: -25%;
+        }
+        @include breakpoint(lg){
+            right: -40%;
+        }
+        @include breakpoint(md){
+            display: none;
+        }
+        .shape{
+            @include background;
+            background-position: top left;
+            background-size: contain;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: -13%;
+        }
+    }
+}
+
+@keyframes section-animation-2 {
+    0% {
+      width: 0;
+    }
+    15% {
+      width: 100%;
+    }
+    85% {
+      opacity: 1;
+    }
+    90% {
+      width: 100%;
+      opacity: 0;
+    }
+    to {
+      width: 0;
+      opacity: 0;
+    }
+  }
+
+.pixfix-swiper-pagination{
+    height: 100%;
+    width: auto !important;
+    position: absolute;
+    top: 50%;
+    bottom: auto;
+    left: 50px !important;
+    z-index: 2;
+    @include breakpoint(xl){
+        left: 25px!important;
+    }
+    @media (max-width: 1250px){
+        display: none;
+    }
+    .swiper-pagination-bullet{
+        background-color: transparent;
+        width: 20px;
+        height: 20px;
+        position: relative;
+        border-radius: 50%;
+        opacity: 1;
+        display: block;
+        &.swiper-pagination-bullet-active{
+            border: 1px solid var(--rr-color-common-white);
+        }
+        &:before{
+            content: "";
+            background-color: var(--rr-color-common-white);
+            width: 5px;
+            height: 5px;
+            border: 1px solid var(--rr-color-common-white);
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        &:not(:last-of-type){
+            margin-bottom: 10px;
+        }
+    }
+}
+
+
+.ripple,
+.ripple:before,
+.ripple:after {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    transform: translateX(-50%) translateY(-50%);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
+    -moz-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
+    -ms-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
+    -o-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
+    -webkit-animation: rippleOne 3s infinite;
+    -moz-animation: rippleOne 3s infinite;
+    -ms-animation: rippleOne 3s infinite;
+    -o-animation: rippleOne 3s infinite;
+    animation: rippleOne 3s infinite;
+}
+
+.ripple {
+    z-index: -1;
+}
+.ripple:before {
+    -webkit-animation-delay: 0.9s;
+    -moz-animation-delay: 0.9s;
+    -ms-animation-delay: 0.9s;
+    -o-animation-delay: 0.9s;
+    animation-delay: 0.9s;
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.ripple:after {
+    -webkit-animation-delay: 0.6s;
+    -moz-animation-delay: 0.6s;
+    -ms-animation-delay: 0.6s;
+    -o-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+@-webkit-keyframes rippleOne {
+    70% {
+        box-shadow: 0 0 0 20px rgba(244, 68, 56, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(244, 68, 56, 0);
+    }
+    }
+    @keyframes rippleOne {
+    70% {
+        box-shadow: 0 0 0 20px rgba(244, 68, 56, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(244, 68, 56, 0);
+    }
+}
+
+
+/* Slider 2 */
+.slider-2{
+    .slider-item{
+        .slide-img-wrap{
+            height: 830px;
+        }
+        .slider-content-wrap{
+            left: -100px;
+            margin-top: 0;
+            @include breakpoint(xl){
+                left: 0;
+            }
+            .slider-content-inner{
+                @include breakpoint(sm){
+                    padding-right: 0;
+                }
+            }
+            .slider-content{
+                background: linear-gradient(90deg, #0F1B24 0.39%, rgba(15, 27, 36, 0.00) 99.62%);
+                padding: 60px 100px;
+                @include breakpoint(sm){
+                    padding: 50px 30px;
+                }
+                .pixfix-caption.heading{
+                    margin-bottom: 20px;
+                }
+                .slider-desc{
+                    margin-bottom: 40px;
+                    p{
+                        color: var(--rr-color-common-white);
+                        max-width: 620px;
+                        width: 100%;
+                        margin-bottom: 0;
+                    }
+                }
+                .slider-btn-wrap{
+                    @include flex-vertical-center;
+                    column-gap: 20px;
+                    flex-wrap: wrap;
+                    row-gap: 10px;
+                    .slider-btn{
+                        .lt-primary-btn{
+                            background-color: transparent;
+                            border: 1px solid rgba(255, 255, 255, 0.3);
+                            &:hover{
+                                border: 1px solid var(--rr-color-heading-primary);
+                            }
+                            &.active{
+                                background-color: var(--rr-color-heading-primary);
+                                border: 1px solid var(--rr-color-heading-primary);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .slide-img-wrap{
+            @include breakpoint(sm){
+                height: 650px;
+            }
+        }
+    }
+    .pixfix-swiper-pagination{
+        left: auto!important;
+        right: 100px;
+        top: 40%;
+        @media (max-width: 1250px){
+            display: block;
+        }
+        @include breakpoint(md){
+            right: 50px;
+        }
+        @include breakpoint(sm){
+            display: none;
+        }
+        .swiper-pagination-bullet{
+            background-color: var(--rr-color-common-white);
+            height: 10px;
+            width: 10px;
+            @include transition(all 0.3s ease-in-out);
+            border: none;
+            &:before{
+                display: none;
+            }
+            &.swiper-pagination-bullet-active{
+                background-color: var(--rr-color--primary);
+                height: 20px;
+                border-radius: 5px;
+            }
+        }
+    }
+}
+
+
+/* Text Animation */
+.pixfix-animation,
+.pixfix-animation span {
+    animation-duration: 0.3s;
+    animation-fill-mode: both;
+}
+
+.pixfix-animation span {
+    display: inline-block;
+}
+
+/* Fade Effect */
+.pixfix-fadeIn {
+    animation-name: asFadeIn;
+}
+
+@keyframes asFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.pixfix-fadeInLeft {
+    animation-name: asFadeInLeft;
+}
+
+@keyframes asFadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.pixfix-fadeInRight {
+    animation-name: asFadeInRight;
+}
+
+
+
+@keyframes asFadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.pixfix-fadeInDown {
+    animation-name: asFadeInTop;
+}
+
+@keyframes asFadeInTop {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.pixfix-fadeInUp {
+    animation-name: asFadeInBottom;
+}
+
+@keyframes asFadeInBottom {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Image Effect */
+.pixfix-img-effect {
+    animation-name: imgEffect;
+}
+
+@keyframes imgEffect {
+    from {
+        opacity: 0;
+        transform: translatex(50%) scalex(2);
+        filter: blur(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translatex(0) scalex(1);
+        filter: blur(0);
+    }
+}
+
+/* Move From Effect */
+.pixfix-moveFromLeft {
+    animation-name: asMoveFromLeft;
+}
+
+@keyframes asMoveFromLeft {
+    from {
+        visibility: hidden;
+        transform: translateX(-50px);
+    }
+
+    to {
+        visibility: visible;
+    }
+}
+
+.pixfix-moveFromRight {
+    animation-name: asMoveFromRight;
+}
+
+@keyframes asMoveFromRight {
+    from {
+        visibility: hidden;
+        transform: translateX(50px);
+    }
+
+    to {
+        visibility: visible;
+    }
+}
+
+.pixfix-moveFromTop {
+    animation-name: asMoveFromTop;
+}
+
+@keyframes asMoveFromTop {
+    from {
+        visibility: hidden;
+        transform: translateY(-50px);
+    }
+
+    to {
+        visibility: visible;
+    }
+}
+
+.pixfix-moveFromBottom {
+    animation-name: asMoveFromBottom;
+}
+
+@keyframes asMoveFromBottom {
+    from {
+        visibility: hidden;
+        transform: translateY(50px);
+    }
+
+    to {
+        visibility: visible;
+    }
+}
+
+/* Blur Effect */
+
+.pixfix-blurIn {
+    animation-name: asBlurIn;
+}
+
+@keyframes asBlurIn {
+    from {
+        filter: blur(20px);
+        opacity: 0;
+    }
+}
+
+.pixfix-blurInLeft {
+    animation-name: asBlurInLeft;
+}
+
+@keyframes asBlurInLeft {
+    from {
+        transform: translateX(50px);
+        filter: blur(20px);
+        opacity: 0;
+    }
+}
+
+.pixfix-blurInRight {
+    animation-name: asBlurInRight;
+}
+
+@keyframes asBlurInRight {
+    from {
+        transform: translateX(-50px);
+        filter: blur(20px);
+        opacity: 0;
+    }
+}
+
+.pixfix-blurInTop {
+    animation-name: asBlurInTop;
+}
+
+@keyframes asBlurInTop {
+    from {
+        transform: translateY(50px);
+        filter: blur(20px);
+        opacity: 0;
+    }
+}
+
+.pixfix-blurInBottom {
+    animation-name: asBlurInBottom;
+}
+
+@keyframes asBlurInBottom {
+    from {
+        transform: translateY(-50px);
+        filter: blur(20px);
+        opacity: 0;
+    }
+}
+
+/* Zoom Effect */
+.pixfix-zoomIn {
+    animation-name: asZoomIn;
+}
+
+@keyframes asZoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.pixfix-zoomInLeft {
+    animation-name: asZoomInLeft;
+}
+
+@keyframes asZoomInLeft {
+    from {
+        transform: scale(5) translateX(-50%);
+        opacity: 0;
+    }
+}
+
+.pixfix-zoomInRight {
+    animation-name: asZoomInRight;
+}
+
+@keyframes asZoomInRight {
+    from {
+        transform: scale(5) translateX(50%);
+        opacity: 0;
+    }
+}
+
+.pixfix-zoomInTop {
+    animation-name: asZoomInTop;
+}
+
+@keyframes asZoomInTop {
+    from {
+        transform: scale(10) translateY(-50%);
+        opacity: 0;
+    }
+}
+
+.pixfix-zoomInBottom {
+    animation-name: asZoomInBottom;
+}
+
+@keyframes asZoomInBottom {
+    from {
+        transform: scale(10) translateY(50%);
+        opacity: 0;
+    }
+}
+
+/* Flip Effect */
+.pixfix-flipInTop {
+    animation-name: asFlipInTop;
+}
+
+@keyframes asFlipInTop {
+    from {
+        transform: perspective(600px);
+        opacity: 0;
+    }
+
+    30% {
+        transform: perspective(600px) rotateX(180deg);
+        transform-origin: 0 0;
+        animation-timing-function: ease-out;
+    }
+
+    to {
+        transform: perspective(600px);
+    }
+}
+
+.pixfix-flipInBottom {
+    animation-name: asFlipInBottom;
+}
+
+@keyframes asFlipInBottom {
+    from {
+        transform: perspective(600px);
+        opacity: 0;
+    }
+
+    30% {
+        transform: perspective(600px) rotateX(180deg);
+        transform-origin: bottom;
+        animation-timing-function: ease-out;
+    }
+
+    to {
+        transform: perspective(600px);
+    }
+}
+
+/* Roll Effect */
+.pixfix-rollFromLeft {
+    animation-name: asRollFromLeft;
+}
+
+@keyframes asRollFromLeft {
+    from {
+        transform: translateX(-60px) perspective(600px) rotateY(180deg);
+        opacity: 0;
+    }
+}
+
+.pixfix-rollFromRight {
+    animation-name: asRollFromRight;
+}
+
+@keyframes asRollFromRight {
+    from {
+        transform: translateX(60px) perspective(600px) rotateY(-180deg);
+        opacity: 0;
+    }
+}
+
+.pixfix-rollFromTop {
+    animation-name: asRollFromTop;
+}
+
+@keyframes asRollFromTop {
+    from {
+        transform: translateY(-60px) perspective(600px) rotateX(180deg);
+        opacity: 0;
+    }
+}
+
+.pixfix-rollFromBottom {
+    animation-name: asRollFromBottom;
+}
+
+@keyframes asRollFromBottom {
+    from {
+        transform: translateY(60px) perspective(600px) rotateX(-180deg);
+        opacity: 0;
+    }
+}
+
+/* Rotate Skate Effect */
+.pixfix-rotateSkateInRight {
+    animation-name: asRotateSkateInRight;
+}
+
+@keyframes asRotateSkateInRight {
+    from {
+        transform: scaleX(0.2) translateX(100px);
+        opacity: 0;
+    }
+}
+
+.pixfix-rotateSkateInLeft {
+    animation-name: asRotateSkateInLeft;
+}
+
+@keyframes asRotateSkateInLeft {
+    from {
+        transform: scaleX(0.2) translateX(-100px);
+        opacity: 0;
+    }
+}
+
+.pixfix-rotateSkateInTop {
+    animation-name: asRotateSkateInTop;
+}
+
+@keyframes asRotateSkateInTop {
+    from {
+        transform: scaleY(0.2) translateY(-100px);
+        opacity: 0;
+    }
+}
+
+.pixfix-rotateSkateInBottom {
+    animation-name: asRotateSkateInBottom;
+}
+
+@keyframes asRotateSkateInBottom {
+    from {
+        transform: scaleY(0.2) translateY(100px);
+        opacity: 0;
+    }
+}
+
+/* PopUp Effect */
+.pixfix-popUp {
+    animation-name: asPopUp;
+}
+
+@keyframes asPopUp {
+    0% {
+        visibility: hidden;
+    }
+
+    50% {
+        transform: scale(1.1);
+        visibility: visible;
+    }
+}
+
+.pixfix-popUpLeft {
+    animation-name: asPopUpLeft;
+}
+
+@keyframes asPopUpLeft {
+    0% {
+        visibility: hidden;
+    }
+
+    50% {
+        visibility: visible;
+        transform: translateX(-20px) scale(1.1);
+        animation-timing-function: ease-in;
+    }
+}
+
+.pixfix-popUpRight {
+    animation-name: asPopUpRight;
+}
+
+@keyframes asPopUpRight {
+    0% {
+        visibility: hidden;
+    }
+
+    50% {
+        visibility: visible;
+        transform: translateX(20px) scale(1.1);
+        animation-timing-function: ease-in;
+    }
+}
+
+/* !END:  Slider CSS */

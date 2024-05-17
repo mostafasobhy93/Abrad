@@ -1,0 +1,94 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Subscribe CSS
+----------------------------------------*/
+.subscribe-section{
+    position: relative;
+    z-index: 1;
+    .bg-color{
+        background-color: var(--rr-color-heading-primary);
+        height: 50%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+}
+
+.subscribe-wrap{
+    background-color: var(--rr-color-grey-1);
+    padding: 0 50px;
+    position: relative;
+    z-index: 1;
+    @include breakpoint(sm){
+        padding: 50px 20px 0 20px;
+        flex-direction: column-reverse;
+        row-gap: 40px;
+    }
+    .shape{
+        background-color: var(--rr-color--primary);
+        width: 190px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 80px;
+        transform: skew(-25deg);
+        z-index: -1;
+        @include breakpoint(md){
+            left: 0;
+            width: 150px;
+        }
+        @include breakpoint(sm){
+            display: none;
+        }
+    }
+    .subscribe-man{
+        text-align: center;
+        padding-right: 30px;
+    }
+    .subscribe-content{
+        @include flex-vertical-center;
+        justify-content: space-between;
+        column-gap: 70px;
+        flex-wrap: wrap;
+        row-gap: 20px;
+        @include breakpoint(lg){
+            column-gap: 40px;
+        }
+        .section-heading{
+            margin-bottom: 0;
+            .section-title{
+                margin-bottom: 0;
+                font-size: 43px;
+                @include breakpoint(md){
+                    font-size: 36px;
+                }
+            }
+        }
+        .subscribe-form{
+            max-width: 430px;
+            width: 100%;
+            position: relative;
+            .form-control{
+                border: 1px solid var(--rr-color-border-1);
+                padding: 21px 162px 21px 20px;
+                box-shadow: none;
+                border-radius: 0;
+                @include tp-placeholder{
+                    color: var(--rr-color-text-body);
+                }
+            }
+            .rr-primary-btn{
+                position: absolute;
+                top: 50%;
+                right: 5px;
+                transform: translateY(-50%);
+            }
+        }
+    }
+}
+
+
+/* !END:  Subscribe CSS */

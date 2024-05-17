@@ -1,0 +1,152 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Feature CSS
+----------------------------------------*/
+.feature-item{
+    background-color: var(--rr-color-grey-1);
+    padding: 40px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    @include transition(all 0.3s ease-in-out);
+    @include breakpoint(sm){
+        padding: 40px 20px;
+    }
+    .shape{
+        position: absolute;
+        bottom: -30px;
+        right: -30px;
+        visibility: hidden;
+        opacity: 0;
+        @include transition(all 0.5s ease-in-out);
+        z-index: -1;
+    }
+    .feature-icon{
+        background-color: var(--rr-color--primary);
+        height: 80px;
+        width: 80px;
+        @include flex-center;
+        margin-bottom: 30px;
+        @include transition(all 0.3s ease-in-out);
+        svg{
+            color: var(--rr-color-common-white);
+            @include transition(all 0.3s ease-in-out);
+        }
+    }
+    .feature-content{
+        .title{
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        p{
+            margin-bottom: 20px;
+            @include transition(all 0.3s ease-in-out);
+        }
+        .read-more{
+            font-family: var(--rr-ff-heading);
+            color: var(--rr-color-heading-primary);
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            column-gap: 10px;
+            line-height: 1;
+            @include transition(all 0.3s ease-in-out);
+            i{
+                color: var(--rr-color--primary);
+            }
+            &:hover{
+                color: var(--rr-color--primary);
+            }
+        }
+    }
+    &:hover{
+        background-color: var(--rr-color--primary);
+        .shape{
+            visibility: visible;
+            opacity: 1;
+            right: 0;
+            bottom: 0;
+        }
+        .feature-icon{
+            background-color: var(--rr-color-common-white);
+            svg{
+                color: var(--rr-color--primary);
+            }
+        }
+        .feature-content{
+            .title{
+                a{
+                    color: var(--rr-color-common-white);
+                }
+            }
+            p{
+                color: var(--rr-color-common-white);
+            }
+            .read-more{
+                color: var(--rr-color-common-white);
+                i{
+                    color: var(--rr-color-common-white);
+                }
+            }
+        }
+    }
+}
+
+
+// Feature 2
+
+.feature-wrap{
+    max-width: 1540px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+    padding: 260px 0 120px 0;
+    position: relative;
+    z-index: 1;
+    @include breakpoint(md){
+        padding: 220px 0 70px 0;
+    }
+    .feature-img{
+        background-image: url(../img/images/feature-img-1.jpg);
+        background-repeat: no-repeat;
+        background-position: top left;
+        background-size: contain;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -2;
+    }
+    .overlay{
+        background-image: url(../img/shapes/overlay-shape.png);
+        background-repeat: no-repeat;
+        background-position: top right;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+    }
+}
+
+.feature-info{
+    .about-box-wrap{
+        margin-top: 40px;
+        .about-box{
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            .title{
+                color: var(--rr-color-common-white);
+            }
+        }
+    }
+}
+
+
+/* !END:  Feature CSS */

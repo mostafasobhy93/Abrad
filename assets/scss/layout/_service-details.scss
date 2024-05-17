@@ -1,0 +1,146 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Pricing CSS
+----------------------------------------**/
+.service-sidebar{
+    .sidebar-list{
+        list-style: none;
+        margin-bottom: 40px;
+        li{
+            text-align: center;
+            &:not(:last-of-type){
+                margin-bottom: 20px;
+            }
+            a{
+                color: var(--rr-color-text-body);
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 1;
+                padding: 21px 0;
+                @include flex-center;
+                border: 1px solid var(--rr-color-border-1);
+                width: 100%;
+                @include breakpoint(sm){
+                    font-size: 13px;
+                }
+                &:hover{
+                    border: 1px solid var(--rr-color--primary);
+                }
+            }
+        }
+    }
+    .sidebar-box{
+        position: relative;
+        margin-bottom: 40px;
+        img{
+            width: 100%;
+        }
+        .content{
+            background-color: rgba(23, 23, 23, 0.8);
+            padding: 30px 40px;
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: calc(100% - 80px);
+            .title{
+                font-size: 15px;
+                line-height: 1.8;
+            }
+            .number{
+                color: var(--rr-color-common-white);
+                font-weight: 700;
+                font-size: 30px;
+                display: block;
+            }
+            .mail{
+                color: var(--rr-color-common-white);
+                font-size: 16px;
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+.service-details-content{
+    img{
+        width: 100%;
+    }
+    .title{
+        font-size: 30px;
+        font-weight: 700;
+        margin: 20px 0;
+    }
+    .service-details-items{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 2;
+        grid-gap: 30px;
+        @include breakpoint(sm){
+            grid-template-columns: 1fr;        }
+        .service-details-item{
+            position: relative;
+            .icon{
+                background-color: var(--rr-color--primary);
+                height: 88px;
+                width: 88px;
+                @include flex-center;
+                position: absolute;
+                top: 0;
+                left: 0;
+                img{
+                    width: 65px;
+                    height: 65px;
+                }
+            }
+            .item-content{
+                padding: 20px 20px 20px 60px;
+                border: 1px solid var(--rr-color-border-1);
+                margin-left: 50px;
+                .item-title{
+                    font-weight: 700;
+                    margin-bottom: 15px;
+                }
+                p{
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+                    @include breakpoint(md){
+                        br{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .service-video-box{
+        position: relative;
+        .video-btn{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            a{
+                background-color: var(--rr-color-common-white);
+                color: var(--rr-color--primary);
+                font-size: 22px;
+                height: 65px;
+                width: 65px;
+                @include flex-center;
+                &:hover{
+                    background-color: var(--rr-color--primary);
+                    color: var(--rr-color-common-white);
+                }
+            }
+            i{
+                margin-top: 10px;
+                line-height: 1;
+            }
+        }
+    }
+}
+
+
+/* !END:  Pricing CSS */

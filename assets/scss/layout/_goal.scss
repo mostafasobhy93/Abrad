@@ -1,0 +1,130 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Goal CSS
+----------------------------------------*/
+
+.goal-section{
+    overflow: hidden;
+    .section-heading{
+        .section-title{
+            @include breakpoint(xl){
+                br{
+                    display: none;
+                }
+            }
+        }
+    }
+    .goal-wrap{
+        @include breakpoint(lg){
+            flex-direction: column;
+            >div{
+                width: 100%;
+            }
+        }
+    }
+}
+
+.goal-content{
+    .goal-item-wrap{
+        @include flex-vertical-center;
+        flex-wrap: wrap;
+        row-gap: 20px;
+        column-gap: 30px;
+        margin-bottom: 40px;
+        .goal-item{
+            background-color: #232323;
+            display: grid;
+            align-items: center;
+            grid-template-columns: 80px 1fr;
+            grid-gap: 15px;
+            padding: 20px;
+            @include breakpoint(sm){
+                grid-template-columns: 1fr;
+                width: 100%;
+                grid-gap: 15px;
+            }
+            .goal-icon{
+                background-color: var(--rr-color-heading-primary);
+                border-radius: 50%;
+                height: 80px;
+                width: 80px;
+                @include flex-center;
+                svg{
+                    height: 45px;
+                    width: 45px;
+                    margin: 0 auto;
+                    color: var(--rr-color--primary);
+                }
+            }
+            .goal-info{
+                .title{
+                    color: var(--rr-color-common-white);
+                    font-weight: 700px;
+                    margin-bottom: 15px;
+                }
+                p{
+                    color: var(--rr-color-common-white);
+                    font-size: 16px;
+                    opacity: 0.8;
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+    .goal-btn-wrap{
+        @include flex-vertical-center;
+        column-gap: 30px;
+        flex-wrap: wrap;
+        row-gap: 20px;
+        .goal-contact{
+            @include flex-vertical-center;
+            column-gap: 20px;
+            .contact-icon{
+                background-color: var(--rr-color-common-white);
+                color: var(--rr-color--primary);
+                font-size: 20px;
+                height: 60px;
+                width: 60px;
+                @include flex-center;
+                border-radius: 50%;
+            }
+            .number{
+                color: var(--rr-color-common-white);
+                font-size: 16px;
+                font-weight: 400;
+                margin-bottom: 0;
+                span{
+                    display: block;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}
+
+.goal-img{
+    position: relative;
+    text-align: right;
+    z-index: 1;
+    @include breakpoint(lg){
+        text-align: center;
+    }
+    .bg-shape{  
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        bottom: 170px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+        @include breakpoint(md){
+            bottom: 0;
+            left: 40%;
+        }
+    }
+}
+
+/* !END:  About CSS */

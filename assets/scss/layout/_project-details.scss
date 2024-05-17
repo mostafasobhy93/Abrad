@@ -1,0 +1,92 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Project Details CSS
+----------------------------------------*/
+.project-details{
+    .project-details-img{
+        margin-bottom: 50px;
+        position: relative;
+        img{
+            max-width: 1180px;
+            width: 100%;
+            @include breakpoint(sm){
+                height: 500px;
+                object-fit: cover;
+            }
+        }
+        .details-list{
+            background-color: var(--rr-color-grey-1);
+            position: absolute;
+            bottom: 50px;
+            right: 0;
+            padding: 50px 40px;
+            list-style: none;
+            @include breakpoint(sm){
+                padding: 30px 20px;
+            }
+            li{
+                &:not(:last-of-type){
+                    margin-bottom: 15px;
+                }
+                i{
+                    color: var(--rr-color--primary);
+                    margin-right: 10px;
+                }
+                span{
+                    color: var(--rr-color-text-body);
+                    font-size: 16px;
+                    font-weight: 400;
+                }
+                .name{
+                    font-family: var(--rr-ff-heading);
+                    color: var(--rr-color-heading-primary);
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    width: 100px;
+                    display: inline-block;
+                }
+            }
+        }
+    }
+    .main-title{
+        @include breakpoint(sm){
+            font-size: 38px;
+        }
+    }
+    .details-img-wrap{
+        @include flex-vertical-center;
+        column-gap: 24px;
+        flex-wrap: wrap;
+        row-gap: 24px;
+    }
+    .project-details-info{
+        .sub-title{
+            font-size: 30px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        ul{
+            margin: 30px 0 30px 0;
+            list-style: none;
+            li{
+                font-family: var(--rr-ff-heading);
+                color: var(--rr-color-heading-primary);
+                @include flex-vertical-center;
+                column-gap: 15px;
+                font-size: 16px;
+                font-weight: 700;
+                text-transform: uppercase;
+                &:not(:last-of-type){
+                    margin-bottom: 15px;
+                }
+                i{
+                    color: var(--rr-color--primary);
+                }
+            }
+        }
+    }
+}
+
+
+/* !END:  Project Details CSS */
