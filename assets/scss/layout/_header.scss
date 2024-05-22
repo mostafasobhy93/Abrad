@@ -688,7 +688,7 @@ START: Header CSS
         width: 100%;
         opacity: 0.5;
         visibility: visible;
-        cursor: url(../img/cancel.png), auto;
+        cursor: url(../../img/cancel.png), auto;
     }
     @include breakpoint(md) {
         display: none;

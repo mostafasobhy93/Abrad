@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*-----------------------------------------------------------------------------------
 
     Template Name: PixFix - Handyman Services Html5 Template
@@ -48,7 +47,7 @@ START: Default CSS
   --rr-color-common-dark: #232323;
   --rr-color-heading-primary: #171717;
   --rr-color-text-body: #6E777D;
-  --rr-color--primary: #FF6600;
+  --rr-color--primary: #1883CD;
   --rr-color--secondary: #ffc226;
   --rr-color-grey-1: #F8F8F8;
   --rr-color-border-1: #ddd;
@@ -153,7 +152,6 @@ a:hover {
 }
 
 .slick-list.draggable {
-  cursor: -webkit-grab;
   cursor: grab;
 }
 
@@ -224,12 +222,6 @@ ul {
 }
 
 *::-moz-placeholder {
-  color: var(--rr-color-common-black);
-  font-size: var(--rr-fs-body);
-  opacity: 1;
-}
-
-*:-ms-input-placeholder {
   color: var(--rr-color-common-black);
   font-size: var(--rr-fs-body);
   opacity: 1;
@@ -765,7 +757,6 @@ ul {
   background-color: var(--rr-color--primary);
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: sk-three-bounce 1.4s ease-in-out 0s infinite both;
   animation: sk-three-bounce 1.4s ease-in-out 0s infinite both;
 }
 
@@ -786,22 +777,11 @@ ul {
 }
 
 .sk-three-bounce .sk-bounce1 {
-  -webkit-animation-delay: -0.32s;
   animation-delay: -0.32s;
 }
 
 .sk-three-bounce .sk-bounce2 {
-  -webkit-animation-delay: -0.16s;
   animation-delay: -0.16s;
-}
-
-@-webkit-keyframes sk-three-bounce {
-  0%, 80%, 100% {
-    transform: scale(0);
-  }
-  40% {
-    transform: scale(1);
-  }
 }
 @keyframes sk-three-bounce {
   0%, 80%, 100% {
@@ -809,56 +789,6 @@ ul {
   }
   40% {
     transform: scale(1);
-  }
-}
-/*  Custom Cursor */
-@media (min-width: 992px) {
-  .mt-cursor {
-    display: block;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    position: fixed;
-    left: 10px;
-    top: 10px;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
-    pointer-events: none;
-    visibility: hidden;
-    z-index: 10000;
-    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-  }
-
-  .mt-cursor:before {
-    background: var(--rr-color--primary);
-    opacity: 1;
-    content: "";
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    transition: all 0.3s ease;
-  }
-
-  .mt-cursor.cursor-grow:before {
-    opacity: 0.7;
-    transform: scale(1.5);
-    transition: all 0.3s ease;
-  }
-
-  .mt-cursor.hide {
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    transition-delay: 0.4s;
-  }
-
-  .mt-cursor.hide .inner {
-    transform: scale(0.1);
-    transition: transform 0.3s ease;
   }
 }
 .sticky-widget {
@@ -1210,7 +1140,7 @@ START: Header CSS
   font-family: "Font Awesome 6 Pro";
   font-size: 14px;
   font-weight: 700;
-  content: "";
+  content: "\f078";
   color: var(--rr-color-heading-primary);
   position: absolute;
   top: 50%;
@@ -1515,8 +1445,7 @@ START: Header CSS
   z-index: 100;
   padding: 40px;
   transition: transform 0.5s ease;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 .side-menu-wrapper .side-menu-close {
   background-color: var(--rr-color--primary);
@@ -1615,7 +1544,7 @@ START: Header CSS
   width: 100%;
   opacity: 0.5;
   visibility: visible;
-  cursor: url(../img/cancel.png), auto;
+  cursor: url(../../img/cancel.png), auto;
 }
 @media only screen and (max-width: 992px) {
   .side-menu-overlay {
@@ -1639,15 +1568,6 @@ START: Header CSS
   -webkit-animation-timing-function: ease;
   box-shadow: 0px 1px 3px 0px rgba(17, 17, 17, 0.1);
   z-index: 99;
-}
-
-@-webkit-keyframes menuSticky {
-  0% {
-    transform: translateY(-100%);
-  }
-  100% {
-    transform: translateY(0%);
-  }
 }
 @keyframes menuSticky {
   0% {
@@ -1676,8 +1596,7 @@ START: Header CSS
     z-index: 100;
     padding: 40px 40px 40px 40px;
     transition: transform 0.5s ease;
-    -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
+    backface-visibility: hidden;
   }
 }
 @media only screen and (max-width: 992px) and (max-width: 767px) {
@@ -1691,8 +1610,6 @@ START: Header CSS
   .mobile-side-menu.is-open {
     transform: translateX(0);
   }
-}
-@media only screen and (max-width: 992px) {
   .mobile-side-menu .side-menu-head {
     display: flex;
     align-items: center;
@@ -1727,28 +1644,20 @@ START: Header CSS
     background-color: var(--rr-color--primary);
     color: var(--rr-color-common-white);
   }
-}
-@media only screen and (max-width: 992px) {
   .mobile-side-menu .side-menu-wrap {
     overflow: hidden;
     margin-bottom: 50px;
   }
-}
-@media only screen and (max-width: 992px) {
   .mobile-side-menu p {
     color: var(--rr-color-common-white);
     margin-bottom: 50px;
   }
-}
-@media only screen and (max-width: 992px) {
   .mobile-side-menu .list-header {
     color: var(--rr-color-common-white);
     font-family: var(--rr-ff-body);
     font-weight: 400;
     margin-bottom: 30px;
   }
-}
-@media only screen and (max-width: 992px) {
   .mobile-side-menu .side-menu-list li {
     font-family: var(--rr-ff-heading);
     font-size: 18px;
@@ -1756,7 +1665,7 @@ START: Header CSS
     color: var(--rr-color-heading-primary);
   }
   .mobile-side-menu .side-menu-list li span,
-.mobile-side-menu .side-menu-list li a {
+  .mobile-side-menu .side-menu-list li a {
     color: var(--rr-color-heading-primary);
     margin-left: 10px;
     font-size: 18px;
@@ -1764,8 +1673,6 @@ START: Header CSS
   .mobile-side-menu .side-menu-list li i {
     margin-right: 10px;
   }
-}
-@media only screen and (max-width: 992px) {
   .mobile-side-menu .mean-bar {
     background-color: transparent;
     min-height: auto;
@@ -1835,7 +1742,7 @@ START: Header CSS
     color: var(--rr-color-common-white);
   }
   .mobile-side-menu .mean-bar .mean-nav.mean-nav > ul li a.mean-expand.mean-clicked:after {
-    content: "";
+    content: "\f068";
   }
   .mobile-side-menu .mean-bar .mean-nav.mean-nav > ul li a.mean-expand.mean-clicked:before {
     display: none;
@@ -1843,8 +1750,6 @@ START: Header CSS
   .mobile-side-menu .mean-bar .mean-nav.mean-nav > ul li a.mean-expand i {
     display: none;
   }
-}
-@media only screen and (max-width: 992px) {
   .mobile-side-menu .mean-bar .mean-nav.mean-nav > ul li ul {
     padding: 0 0 0 30px;
     margin-top: 20px;
@@ -2113,8 +2018,7 @@ START: Slider CSS
   bottom: -7px;
   left: 0;
   z-index: -1;
-  -webkit-animation: section-animation-2 3s infinite;
-          animation: section-animation-2 3s infinite;
+  animation: section-animation-2 3s infinite;
 }
 .slider-item .slider-content-wrap .pixfix-cap {
   color: var(--rr-color-common-white);
@@ -2369,26 +2273,6 @@ START: Slider CSS
   left: -13%;
 }
 
-@-webkit-keyframes section-animation-2 {
-  0% {
-    width: 0;
-  }
-  15% {
-    width: 100%;
-  }
-  85% {
-    opacity: 1;
-  }
-  90% {
-    width: 100%;
-    opacity: 0;
-  }
-  to {
-    width: 0;
-    opacity: 0;
-  }
-}
-
 @keyframes section-animation-2 {
   0% {
     width: 0;
@@ -2468,7 +2352,6 @@ START: Slider CSS
   -ms-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
   -o-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
   box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
-  -webkit-animation: rippleOne 3s infinite;
   animation: rippleOne 3s infinite;
 }
 
@@ -2477,7 +2360,6 @@ START: Slider CSS
 }
 
 .ripple:before {
-  -webkit-animation-delay: 0.9s;
   animation-delay: 0.9s;
   content: "";
   position: absolute;
@@ -2486,21 +2368,11 @@ START: Slider CSS
 }
 
 .ripple:after {
-  -webkit-animation-delay: 0.6s;
   animation-delay: 0.6s;
   content: "";
   position: absolute;
   right: 0;
   bottom: 0;
-}
-
-@-webkit-keyframes rippleOne {
-  70% {
-    box-shadow: 0 0 0 20px rgba(244, 68, 56, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(244, 68, 56, 0);
-  }
 }
 @keyframes rippleOne {
   70% {
@@ -2612,10 +2484,8 @@ START: Slider CSS
 /* Text Animation */
 .pixfix-animation,
 .pixfix-animation span {
-  -webkit-animation-duration: 0.3s;
-          animation-duration: 0.3s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
 }
 
 .pixfix-animation span {
@@ -2624,17 +2494,7 @@ START: Slider CSS
 
 /* Fade Effect */
 .pixfix-fadeIn {
-  -webkit-animation-name: asFadeIn;
-          animation-name: asFadeIn;
-}
-
-@-webkit-keyframes asFadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  animation-name: asFadeIn;
 }
 
 @keyframes asFadeIn {
@@ -2646,18 +2506,7 @@ START: Slider CSS
   }
 }
 .pixfix-fadeInLeft {
-  -webkit-animation-name: asFadeInLeft;
-          animation-name: asFadeInLeft;
-}
-
-@-webkit-keyframes asFadeInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  to {
-    opacity: 1;
-  }
+  animation-name: asFadeInLeft;
 }
 
 @keyframes asFadeInLeft {
@@ -2670,18 +2519,7 @@ START: Slider CSS
   }
 }
 .pixfix-fadeInRight {
-  -webkit-animation-name: asFadeInRight;
-          animation-name: asFadeInRight;
-}
-
-@-webkit-keyframes asFadeInRight {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  to {
-    opacity: 1;
-  }
+  animation-name: asFadeInRight;
 }
 
 @keyframes asFadeInRight {
@@ -2694,18 +2532,7 @@ START: Slider CSS
   }
 }
 .pixfix-fadeInDown {
-  -webkit-animation-name: asFadeInTop;
-          animation-name: asFadeInTop;
-}
-
-@-webkit-keyframes asFadeInTop {
-  from {
-    opacity: 0;
-    transform: translateY(-50px);
-  }
-  to {
-    opacity: 1;
-  }
+  animation-name: asFadeInTop;
 }
 
 @keyframes asFadeInTop {
@@ -2718,18 +2545,7 @@ START: Slider CSS
   }
 }
 .pixfix-fadeInUp {
-  -webkit-animation-name: asFadeInBottom;
-          animation-name: asFadeInBottom;
-}
-
-@-webkit-keyframes asFadeInBottom {
-  from {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  to {
-    opacity: 1;
-  }
+  animation-name: asFadeInBottom;
 }
 
 @keyframes asFadeInBottom {
@@ -2743,21 +2559,7 @@ START: Slider CSS
 }
 /* Image Effect */
 .pixfix-img-effect {
-  -webkit-animation-name: imgEffect;
-          animation-name: imgEffect;
-}
-
-@-webkit-keyframes imgEffect {
-  from {
-    opacity: 0;
-    transform: translatex(50%) scalex(2);
-    filter: blur(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translatex(0) scalex(1);
-    filter: blur(0);
-  }
+  animation-name: imgEffect;
 }
 
 @keyframes imgEffect {
@@ -2774,18 +2576,7 @@ START: Slider CSS
 }
 /* Move From Effect */
 .pixfix-moveFromLeft {
-  -webkit-animation-name: asMoveFromLeft;
-          animation-name: asMoveFromLeft;
-}
-
-@-webkit-keyframes asMoveFromLeft {
-  from {
-    visibility: hidden;
-    transform: translateX(-50px);
-  }
-  to {
-    visibility: visible;
-  }
+  animation-name: asMoveFromLeft;
 }
 
 @keyframes asMoveFromLeft {
@@ -2798,18 +2589,7 @@ START: Slider CSS
   }
 }
 .pixfix-moveFromRight {
-  -webkit-animation-name: asMoveFromRight;
-          animation-name: asMoveFromRight;
-}
-
-@-webkit-keyframes asMoveFromRight {
-  from {
-    visibility: hidden;
-    transform: translateX(50px);
-  }
-  to {
-    visibility: visible;
-  }
+  animation-name: asMoveFromRight;
 }
 
 @keyframes asMoveFromRight {
@@ -2822,18 +2602,7 @@ START: Slider CSS
   }
 }
 .pixfix-moveFromTop {
-  -webkit-animation-name: asMoveFromTop;
-          animation-name: asMoveFromTop;
-}
-
-@-webkit-keyframes asMoveFromTop {
-  from {
-    visibility: hidden;
-    transform: translateY(-50px);
-  }
-  to {
-    visibility: visible;
-  }
+  animation-name: asMoveFromTop;
 }
 
 @keyframes asMoveFromTop {
@@ -2846,18 +2615,7 @@ START: Slider CSS
   }
 }
 .pixfix-moveFromBottom {
-  -webkit-animation-name: asMoveFromBottom;
-          animation-name: asMoveFromBottom;
-}
-
-@-webkit-keyframes asMoveFromBottom {
-  from {
-    visibility: hidden;
-    transform: translateY(50px);
-  }
-  to {
-    visibility: visible;
-  }
+  animation-name: asMoveFromBottom;
 }
 
 @keyframes asMoveFromBottom {
@@ -2871,15 +2629,7 @@ START: Slider CSS
 }
 /* Blur Effect */
 .pixfix-blurIn {
-  -webkit-animation-name: asBlurIn;
-          animation-name: asBlurIn;
-}
-
-@-webkit-keyframes asBlurIn {
-  from {
-    filter: blur(20px);
-    opacity: 0;
-  }
+  animation-name: asBlurIn;
 }
 
 @keyframes asBlurIn {
@@ -2889,16 +2639,7 @@ START: Slider CSS
   }
 }
 .pixfix-blurInLeft {
-  -webkit-animation-name: asBlurInLeft;
-          animation-name: asBlurInLeft;
-}
-
-@-webkit-keyframes asBlurInLeft {
-  from {
-    transform: translateX(50px);
-    filter: blur(20px);
-    opacity: 0;
-  }
+  animation-name: asBlurInLeft;
 }
 
 @keyframes asBlurInLeft {
@@ -2909,16 +2650,7 @@ START: Slider CSS
   }
 }
 .pixfix-blurInRight {
-  -webkit-animation-name: asBlurInRight;
-          animation-name: asBlurInRight;
-}
-
-@-webkit-keyframes asBlurInRight {
-  from {
-    transform: translateX(-50px);
-    filter: blur(20px);
-    opacity: 0;
-  }
+  animation-name: asBlurInRight;
 }
 
 @keyframes asBlurInRight {
@@ -2929,16 +2661,7 @@ START: Slider CSS
   }
 }
 .pixfix-blurInTop {
-  -webkit-animation-name: asBlurInTop;
-          animation-name: asBlurInTop;
-}
-
-@-webkit-keyframes asBlurInTop {
-  from {
-    transform: translateY(50px);
-    filter: blur(20px);
-    opacity: 0;
-  }
+  animation-name: asBlurInTop;
 }
 
 @keyframes asBlurInTop {
@@ -2949,16 +2672,7 @@ START: Slider CSS
   }
 }
 .pixfix-blurInBottom {
-  -webkit-animation-name: asBlurInBottom;
-          animation-name: asBlurInBottom;
-}
-
-@-webkit-keyframes asBlurInBottom {
-  from {
-    transform: translateY(-50px);
-    filter: blur(20px);
-    opacity: 0;
-  }
+  animation-name: asBlurInBottom;
 }
 
 @keyframes asBlurInBottom {
@@ -2970,19 +2684,7 @@ START: Slider CSS
 }
 /* Zoom Effect */
 .pixfix-zoomIn {
-  -webkit-animation-name: asZoomIn;
-          animation-name: asZoomIn;
-}
-
-@-webkit-keyframes asZoomIn {
-  from {
-    opacity: 0;
-    transform: scale(0.98);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+  animation-name: asZoomIn;
 }
 
 @keyframes asZoomIn {
@@ -2996,15 +2698,7 @@ START: Slider CSS
   }
 }
 .pixfix-zoomInLeft {
-  -webkit-animation-name: asZoomInLeft;
-          animation-name: asZoomInLeft;
-}
-
-@-webkit-keyframes asZoomInLeft {
-  from {
-    transform: scale(5) translateX(-50%);
-    opacity: 0;
-  }
+  animation-name: asZoomInLeft;
 }
 
 @keyframes asZoomInLeft {
@@ -3014,15 +2708,7 @@ START: Slider CSS
   }
 }
 .pixfix-zoomInRight {
-  -webkit-animation-name: asZoomInRight;
-          animation-name: asZoomInRight;
-}
-
-@-webkit-keyframes asZoomInRight {
-  from {
-    transform: scale(5) translateX(50%);
-    opacity: 0;
-  }
+  animation-name: asZoomInRight;
 }
 
 @keyframes asZoomInRight {
@@ -3032,15 +2718,7 @@ START: Slider CSS
   }
 }
 .pixfix-zoomInTop {
-  -webkit-animation-name: asZoomInTop;
-          animation-name: asZoomInTop;
-}
-
-@-webkit-keyframes asZoomInTop {
-  from {
-    transform: scale(10) translateY(-50%);
-    opacity: 0;
-  }
+  animation-name: asZoomInTop;
 }
 
 @keyframes asZoomInTop {
@@ -3050,15 +2728,7 @@ START: Slider CSS
   }
 }
 .pixfix-zoomInBottom {
-  -webkit-animation-name: asZoomInBottom;
-          animation-name: asZoomInBottom;
-}
-
-@-webkit-keyframes asZoomInBottom {
-  from {
-    transform: scale(10) translateY(50%);
-    opacity: 0;
-  }
+  animation-name: asZoomInBottom;
 }
 
 @keyframes asZoomInBottom {
@@ -3069,24 +2739,7 @@ START: Slider CSS
 }
 /* Flip Effect */
 .pixfix-flipInTop {
-  -webkit-animation-name: asFlipInTop;
-          animation-name: asFlipInTop;
-}
-
-@-webkit-keyframes asFlipInTop {
-  from {
-    transform: perspective(600px);
-    opacity: 0;
-  }
-  30% {
-    transform: perspective(600px) rotateX(180deg);
-    transform-origin: 0 0;
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-  }
-  to {
-    transform: perspective(600px);
-  }
+  animation-name: asFlipInTop;
 }
 
 @keyframes asFlipInTop {
@@ -3097,32 +2750,14 @@ START: Slider CSS
   30% {
     transform: perspective(600px) rotateX(180deg);
     transform-origin: 0 0;
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
   }
   to {
     transform: perspective(600px);
   }
 }
 .pixfix-flipInBottom {
-  -webkit-animation-name: asFlipInBottom;
-          animation-name: asFlipInBottom;
-}
-
-@-webkit-keyframes asFlipInBottom {
-  from {
-    transform: perspective(600px);
-    opacity: 0;
-  }
-  30% {
-    transform: perspective(600px) rotateX(180deg);
-    transform-origin: bottom;
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-  }
-  to {
-    transform: perspective(600px);
-  }
+  animation-name: asFlipInBottom;
 }
 
 @keyframes asFlipInBottom {
@@ -3133,8 +2768,7 @@ START: Slider CSS
   30% {
     transform: perspective(600px) rotateX(180deg);
     transform-origin: bottom;
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
   }
   to {
     transform: perspective(600px);
@@ -3142,15 +2776,7 @@ START: Slider CSS
 }
 /* Roll Effect */
 .pixfix-rollFromLeft {
-  -webkit-animation-name: asRollFromLeft;
-          animation-name: asRollFromLeft;
-}
-
-@-webkit-keyframes asRollFromLeft {
-  from {
-    transform: translateX(-60px) perspective(600px) rotateY(180deg);
-    opacity: 0;
-  }
+  animation-name: asRollFromLeft;
 }
 
 @keyframes asRollFromLeft {
@@ -3160,15 +2786,7 @@ START: Slider CSS
   }
 }
 .pixfix-rollFromRight {
-  -webkit-animation-name: asRollFromRight;
-          animation-name: asRollFromRight;
-}
-
-@-webkit-keyframes asRollFromRight {
-  from {
-    transform: translateX(60px) perspective(600px) rotateY(-180deg);
-    opacity: 0;
-  }
+  animation-name: asRollFromRight;
 }
 
 @keyframes asRollFromRight {
@@ -3178,15 +2796,7 @@ START: Slider CSS
   }
 }
 .pixfix-rollFromTop {
-  -webkit-animation-name: asRollFromTop;
-          animation-name: asRollFromTop;
-}
-
-@-webkit-keyframes asRollFromTop {
-  from {
-    transform: translateY(-60px) perspective(600px) rotateX(180deg);
-    opacity: 0;
-  }
+  animation-name: asRollFromTop;
 }
 
 @keyframes asRollFromTop {
@@ -3196,15 +2806,7 @@ START: Slider CSS
   }
 }
 .pixfix-rollFromBottom {
-  -webkit-animation-name: asRollFromBottom;
-          animation-name: asRollFromBottom;
-}
-
-@-webkit-keyframes asRollFromBottom {
-  from {
-    transform: translateY(60px) perspective(600px) rotateX(-180deg);
-    opacity: 0;
-  }
+  animation-name: asRollFromBottom;
 }
 
 @keyframes asRollFromBottom {
@@ -3215,15 +2817,7 @@ START: Slider CSS
 }
 /* Rotate Skate Effect */
 .pixfix-rotateSkateInRight {
-  -webkit-animation-name: asRotateSkateInRight;
-          animation-name: asRotateSkateInRight;
-}
-
-@-webkit-keyframes asRotateSkateInRight {
-  from {
-    transform: scaleX(0.2) translateX(100px);
-    opacity: 0;
-  }
+  animation-name: asRotateSkateInRight;
 }
 
 @keyframes asRotateSkateInRight {
@@ -3233,15 +2827,7 @@ START: Slider CSS
   }
 }
 .pixfix-rotateSkateInLeft {
-  -webkit-animation-name: asRotateSkateInLeft;
-          animation-name: asRotateSkateInLeft;
-}
-
-@-webkit-keyframes asRotateSkateInLeft {
-  from {
-    transform: scaleX(0.2) translateX(-100px);
-    opacity: 0;
-  }
+  animation-name: asRotateSkateInLeft;
 }
 
 @keyframes asRotateSkateInLeft {
@@ -3251,15 +2837,7 @@ START: Slider CSS
   }
 }
 .pixfix-rotateSkateInTop {
-  -webkit-animation-name: asRotateSkateInTop;
-          animation-name: asRotateSkateInTop;
-}
-
-@-webkit-keyframes asRotateSkateInTop {
-  from {
-    transform: scaleY(0.2) translateY(-100px);
-    opacity: 0;
-  }
+  animation-name: asRotateSkateInTop;
 }
 
 @keyframes asRotateSkateInTop {
@@ -3269,15 +2847,7 @@ START: Slider CSS
   }
 }
 .pixfix-rotateSkateInBottom {
-  -webkit-animation-name: asRotateSkateInBottom;
-          animation-name: asRotateSkateInBottom;
-}
-
-@-webkit-keyframes asRotateSkateInBottom {
-  from {
-    transform: scaleY(0.2) translateY(100px);
-    opacity: 0;
-  }
+  animation-name: asRotateSkateInBottom;
 }
 
 @keyframes asRotateSkateInBottom {
@@ -3288,18 +2858,7 @@ START: Slider CSS
 }
 /* PopUp Effect */
 .pixfix-popUp {
-  -webkit-animation-name: asPopUp;
-          animation-name: asPopUp;
-}
-
-@-webkit-keyframes asPopUp {
-  0% {
-    visibility: hidden;
-  }
-  50% {
-    transform: scale(1.1);
-    visibility: visible;
-  }
+  animation-name: asPopUp;
 }
 
 @keyframes asPopUp {
@@ -3312,20 +2871,7 @@ START: Slider CSS
   }
 }
 .pixfix-popUpLeft {
-  -webkit-animation-name: asPopUpLeft;
-          animation-name: asPopUpLeft;
-}
-
-@-webkit-keyframes asPopUpLeft {
-  0% {
-    visibility: hidden;
-  }
-  50% {
-    visibility: visible;
-    transform: translateX(-20px) scale(1.1);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-  }
+  animation-name: asPopUpLeft;
 }
 
 @keyframes asPopUpLeft {
@@ -3335,25 +2881,11 @@ START: Slider CSS
   50% {
     visibility: visible;
     transform: translateX(-20px) scale(1.1);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
   }
 }
 .pixfix-popUpRight {
-  -webkit-animation-name: asPopUpRight;
-          animation-name: asPopUpRight;
-}
-
-@-webkit-keyframes asPopUpRight {
-  0% {
-    visibility: hidden;
-  }
-  50% {
-    visibility: visible;
-    transform: translateX(20px) scale(1.1);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-  }
+  animation-name: asPopUpRight;
 }
 
 @keyframes asPopUpRight {
@@ -3363,8 +2895,7 @@ START: Slider CSS
   50% {
     visibility: visible;
     transform: translateX(20px) scale(1.1);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
   }
 }
 /* !END:  Slider CSS */
@@ -3587,7 +3118,6 @@ START: Hero CSS
   -ms-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
   -o-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
   box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
-  -webkit-animation: rippleOne 3s infinite;
   animation: rippleOne 3s infinite;
 }
 
@@ -3596,7 +3126,6 @@ START: Hero CSS
 }
 
 .ripple:before {
-  -webkit-animation-delay: 0.9s;
   animation-delay: 0.9s;
   content: "";
   position: absolute;
@@ -3605,21 +3134,11 @@ START: Hero CSS
 }
 
 .ripple:after {
-  -webkit-animation-delay: 0.6s;
   animation-delay: 0.6s;
   content: "";
   position: absolute;
   right: 0;
   bottom: 0;
-}
-
-@-webkit-keyframes rippleOne {
-  70% {
-    box-shadow: 0 0 0 20px rgba(244, 68, 56, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(244, 68, 56, 0);
-  }
 }
 @keyframes rippleOne {
   70% {
@@ -3789,27 +3308,14 @@ START: Hero CSS
   bottom: 0;
   left: 35%;
   transform: translate(-50%);
-  -webkit-animation-name: spin;
-          animation-name: spin;
-  -webkit-animation-duration: 15s;
-          animation-duration: 15s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  animation-name: spin;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 @media only screen and (max-width: 767px) {
   .hero-img-wrap .round-shape {
     display: none;
-  }
-}
-
-@-webkit-keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
   }
 }
 
@@ -4246,6 +3752,8 @@ START: Service CSS
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
   transition: 0.3s ease-in-out;
 }
 .service-box .service-img-wrap .service-icon {
@@ -4266,12 +3774,12 @@ START: Service CSS
 }
 .service-box .service-content {
   background-color: var(--rr-color-common-white);
-  padding: 70px 40px 40px 40px;
+  padding: 2.5rem;
   box-shadow: 0px 0px 20px 0px rgba(19, 16, 34, 0.1);
 }
 @media only screen and (max-width: 767px) {
   .service-box .service-content {
-    padding: 70px 20px 40px 20px;
+    padding: 2.5rem 1.25rem;
   }
 }
 .service-box .service-content .title {
@@ -4330,7 +3838,7 @@ START: Service CSS
   }
 }
 .service-3 .service-item .service-content .service-icon {
-  background-color: rgba(255, 102, 0, 0.1);
+  background-color: rgba(24, 131, 205, 0.1);
   height: 80px;
   width: 80px;
   border-radius: 50%;
@@ -4925,6 +4433,14 @@ START: Testi CSS
   padding: 90px 0;
 }
 
+.sponsor-section .sponsor-carousel .sponsor-item img {
+  filter: grayscale(100%);
+  width: 17rem;
+  height: 5rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .bg-color {
   background-color: var(--rr-color-heading-primary);
   height: 45%;
@@ -5062,6 +4578,9 @@ START: Header CSS
   overflow: scroll;
   visibility: hidden;
   transition: all 0.5s ease-in-out;
+}
+.sidebar-area .side-menu-content img {
+  width: 10rem;
 }
 
 .open-sidebar .sidebar-area {
@@ -5209,7 +4728,6 @@ START: Header CSS
     grid-template-columns: 1fr;
     grid-gap: 0;
   }
-
   .sidebar-area {
     width: 350px;
   }
@@ -5219,12 +4737,10 @@ START: Header CSS
     width: 350px;
     padding: 60px 30px;
   }
-
   .sidebar-content .list-post-area.list-2 .list-post-card .post-img {
     height: 90px;
     width: 90px;
   }
-
   .sidebar-content .list-post-area.list-2 .list-post-card {
     grid-template-columns: 90px 1fr;
   }
@@ -6063,8 +5579,7 @@ START: Experiance CSS
   width: 55px;
 }
 .exp-content .exp-contact .exp-img img {
-  -webkit-animation: phone-icon-animate 1s ease-in-out infinite;
-          animation: phone-icon-animate 1s ease-in-out infinite;
+  animation: phone-icon-animate 1s ease-in-out infinite;
 }
 .exp-content .exp-contact .contact {
   margin-bottom: 0;
@@ -6106,24 +5621,6 @@ START: Experiance CSS
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-@-webkit-keyframes phone-icon-animate {
-  0%, 100% {
-    transform: rotate(0) scale(1) skew(1deg);
-  }
-  10% {
-    transform: rotate(-25deg) scale(1) skew(1deg);
-  }
-  20%, 40% {
-    transform: rotate(25deg) scale(1) skew(1deg);
-  }
-  30% {
-    transform: rotate(-25deg) scale(1) skew(1deg);
-  }
-  50% {
-    transform: rotate(0) scale(1) skew(1deg);
-  }
 }
 @keyframes phone-icon-animate {
   0%, 100% {
@@ -6235,6 +5732,10 @@ START: Blog CSS
 }
 .post-card .post-content .desc {
   margin-bottom: 20px;
+}
+.post-card .post-content .price {
+  color: var(--rr-color--primary);
+  font-weight: bold;
 }
 .post-card .post-content .read-more {
   font-family: var(--rr-ff-heading);
@@ -6462,7 +5963,7 @@ START: Page Header CSS
   font-family: "Font Awesome 6 Pro";
   font-size: 13px;
   font-weight: 700;
-  content: "";
+  content: "\f054";
   color: var(--rr-color--primary);
   position: absolute;
   top: 55%;
@@ -6876,7 +6377,7 @@ START: Contact CSS
   margin-bottom: 45px;
 }
 .contact-box .icon {
-  background-color: rgba(255, 102, 0, 0.1);
+  background-color: rgba(24, 131, 205, 0.1);
   color: var(--rr-color--primary);
   width: 60px;
   height: 60px;
@@ -7411,6 +6912,9 @@ START: Footer CSS
   font-weight: 700;
   margin-bottom: 35px;
 }
+.footer-widget .widget-header img {
+  width: 10rem;
+}
 .footer-widget p {
   color: rgba(255, 255, 255, 0.8);
 }
@@ -7536,7 +7040,7 @@ START: Footer CSS
   font-family: "Font Awesome 6 Pro";
   font-size: 14px;
   font-weight: 700;
-  content: "";
+  content: "\f324";
   color: var(--rr-color--primary);
   position: absolute;
   top: 50%;

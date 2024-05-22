@@ -193,6 +193,20 @@ START: Testi CSS
     }
 }
 
+.sponsor-section {
+    .sponsor-carousel{
+
+        .sponsor-item {
+            img {
+                filter: grayscale(100%);
+                width: 17rem;
+                height: 5rem;
+                object-fit: contain;
+            }
+        }
+    }
+}
+
 
 
 // Testi 3

@@ -31,6 +31,12 @@ START: Header CSS
     overflow: scroll;
     visibility: hidden;
     transition: all 0.5s ease-in-out;
+
+    .side-menu-content {
+        img {
+            width: 10rem;
+        }
+    }
 }
 
 .open-sidebar .sidebar-area {

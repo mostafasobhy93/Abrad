@@ -92,6 +92,10 @@ START: Blog CSS
         .desc {
             margin-bottom:20px;
         }
+        .price {
+            color: var(--rr-color--primary);
+            font-weight: bold;
+        }
         .read-more{
             font-family: var(--rr-ff-heading);
             color: var(--rr-color-heading-primary);

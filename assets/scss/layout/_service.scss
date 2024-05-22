@@ -90,6 +90,7 @@ START: Service CSS
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
+                object-position: top;
                 transition: 0.3s ease-in-out;
             }
         }
@@ -108,10 +109,10 @@ START: Service CSS
     }
     .service-content{
         background-color: var(--rr-color-common-white);
-        padding: 70px 40px 40px 40px;
+        padding: 2.5rem;
         box-shadow: 0px 0px 20px 0px rgba(19, 16, 34, 0.1);
         @include breakpoint(sm){
-            padding: 70px 20px 40px 20px;
+            padding: 2.5rem 1.25rem;
         }
         .title{
             font-weight: 700;
@@ -181,7 +182,7 @@ START: Service CSS
                 padding: 40px 20px;
             }
             .service-icon{
-                background-color: rgba(255, 102, 0, 0.1);
+                background-color: rgba(24, 131, 205, 0.1);
                 height: 80px;
                 width: 80px;
                 border-radius: 50%;
